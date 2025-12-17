@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>👀</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Soft animated gradient background */
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+      background-size: 300% 300%;
+      animation: bgMove 10s ease infinite;
+    }
+
+    .content {
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin: 0;
+
+      /* Colorful gradient text */
+      background: linear-gradient(90deg, #ff512f, #dd2476, #24c6dc, #514a9d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      margin-top: 14px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .content:hover {
+      transform: scale(1.04);
+      transition: transform 0.3s ease;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Hey, glad you’re here 👋</h1>
+    <p>I’m hari.</p>
+  </div>
+</body>
+</html>
+
